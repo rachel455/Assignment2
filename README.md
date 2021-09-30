@@ -1,3 +1,3 @@
 # Assignment2
-Group Members for Assignment 2 "\n"
+Group Members for Assignment 2 <br />
 Bill Leung Username: bl5903
