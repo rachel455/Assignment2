@@ -4,6 +4,11 @@
 //This returns a boolean.
 
 // INCLUDES //
-Array.prototype.myIncludes = function() {
-
+Array.prototype.myIncludes = function(includedElement, index) {
+    for(let i = (index || 0); i < this.length; i++){
+        if(this[i] === includedElement){
+            return true;
+        }
+    }
+    return false;
 };
