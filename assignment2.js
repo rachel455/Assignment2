@@ -39,8 +39,13 @@ Array.prototype.myIncludes = function(includedElement, index) {
 };
 
 // INDEXOF //
-Array.prototype.myIndexOf = function() {
-
+Array.prototype.myIndexOf = function(includedElement, index) {
+    for(let i = (index || 0); i < this.length; i++){ // created for loop to loop through array
+        if(this[i] === includedElement){ //find element in array
+            return i; // returns the first index at which a given element can be found in the array
+        }
+    }
+    return -1; // return -1 if it is not present
 };
 
 // PUSH //
