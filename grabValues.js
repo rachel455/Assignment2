@@ -6,7 +6,7 @@
 Object.grabValues = function(objectList) {
     let valuesArray = [];
     for (let value in objectList){
-        value = valuesArray.push(onjectList[value]);
+        value = valuesArray.push(objectList[value]);
     }
     return valuesArray;
 };
