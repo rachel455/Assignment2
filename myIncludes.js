@@ -2,3 +2,8 @@
 //compose a function titled “myIncludes” that will take in an array of elements 
 //and indicate whether or not a target element is contained within the input array. 
 //This returns a boolean.
+
+// INCLUDES //
+Array.prototype.myIncludes = function() {
+
+};
