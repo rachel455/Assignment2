@@ -17,4 +17,4 @@ console.log("myEvery: ");
 const isBelowThreshold = (currentValue) => currentValue < 40;
 const isBelowThreshold2 = (currentValue) => currentValue < 100;
 console.log(cs.myEvery(isBelowThreshold));
-console.log(cs.myEvery(isBelowThreshold2));
+console.log(mjq.myEvery(isBelowThreshold2));
