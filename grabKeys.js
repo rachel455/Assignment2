@@ -3,6 +3,10 @@
 //return all of the keys of the key:value pairs of that object.
 
 // KEYS //
-Object.grabKeys = function() {
-
+Object.grabKeys = function(objectList) {
+    let keysArray = [];
+    for(let key in objectList){
+        key = keysArray.push(key);
+    }
+    return keysArray;
 };
