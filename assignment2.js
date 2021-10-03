@@ -49,8 +49,14 @@ Array.prototype.myIndexOf = function(includedElement, index) {
 };
 
 // PUSH //
-Array.prototype.myPush = function() {
-
+Array.prototype.myPush = function(...args){
+    let arg_i = 0;
+    let length = this.length; // uses length property to determine where to start inserting the given values
+    for(let i = length; i < length + args.length; i++){ // created for loop to loop through array
+        this[i] = args[arg_i]; // append values to an array
+        arg_i++;
+    }
+    return this.length; // returns the new length of the array
 };
 
 // LASTINDEXOF //
