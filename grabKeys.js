@@ -4,9 +4,23 @@
 
 // KEYS //
 Object.grabKeys = function(objectList) {
-    let keysArray = [];
-    for(let key in objectList){
-        key = keysArray.push(key);
+    let keysArray = []; // make an array
+    for(let key in objectList){ // created for loop to loop through array
+        key = keysArray.push(key); // returns an array of a given object's own enumerable property names
     }
-    return keysArray;
+    return keysArray; // returns an array of strings that represent all the enumerable properties of the given object
 };
+
+//Test function along with the native function //
+
+const object1 = {
+    a: 'somestring',
+    b: 42,
+    c: false
+  };
+
+console.log("grabKeys:")
+console.log(Object.grabKeys(object1)); // expected output: Array ["a", "b", "c"]
+
+console.log("keys:")
+console.log(Object.keys(object1)); // expected output: Array ["a", "b", "c"]
