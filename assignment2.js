@@ -70,8 +70,12 @@ Array.prototype.myLastIndexOf = function(includedElement, index) {
 };
 
 // KEYS //
-Object.grabKeys = function() {
-
+Object.grabKeys = function(objectList) {
+    let keysArray = []; // make an array
+    for(let key in objectList){ // created for loop to loop through array
+        key = keysArray.push(key); // returns an array of a given object's own enumerable property names
+    }
+    return keysArray; // returns an array of strings that represent all the enumerable properties of the given object
 };
 
 // VALUES //
