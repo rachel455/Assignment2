@@ -1,4 +1,6 @@
 //FOR EACH //
+//The forEach() method executes a provided function once for each array element.
+
 Array.prototype.myEach = function(callbackFn){
   for(let i = 0; i < this.length;i++){
     if(this[i]===undefined)continue;
