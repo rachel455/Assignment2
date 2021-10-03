@@ -79,6 +79,10 @@ Object.grabKeys = function(objectList) {
 };
 
 // VALUES //
-Object.grabValues = function() {
-
+Object.grabValues = function(objectList) {
+    let valuesArray = []; // make an array
+    for (let value in objectList){ // created for loop to loop through array
+        value = valuesArray.push(objectList[value]); // returns an array of a given object's own enumerable property values
+    }
+    return valuesArray; //returns an array containing the given object's own enumerable property values
 };
