@@ -1,31 +1,66 @@
 // FOR EACH //
-Array.prototype.myEach = function() {
-
+Array.prototype.myEach = function(callbackFn) {
+    for(let i = 0;i <this.length;i++){
+        if(this[i]=== undefined) continue;
+        //element
+        //element,index
+        //element,index,array
+        callbackFn(this[i],i,this);
+    }
 };
 
 // MAP //
-Array.prototype.myMap = function() {
-
+Array.prototype.myMap = function(callbackFn) {
+    let answer = [];
+    for(let i = 0;i < this.length;i++){ //loop through array
+        if(this[i]=== undefined) continue; //if array contains undefinee value continue
+        answer.push(callbackFn(this[i])) //return the values to answer,index,and array
+    }
+    return answer; // returns answer array
 };
 
 // FILTER //
-Array.prototype.myFilter = function() {
-
+Array.prototype.myFilter = function(callbackFn){
+    let storage = []; // storage to store new values in array
+    for(let i = 0; i<this.length;i++){ //loop through array
+        if(this[i]=== undefined) continue; //skips through undefined values
+        if(callbackFn(this[i])===true){ //if the values in the array match the argument, push it into the storage array
+            storage.push(this[i])
+        }
+    }
+    return storage;// return the array
 };
 
 // SOME //
-Array.prototype.mySome = function() {
-
+Array.prototype.mySome = function(callbackFn) { //function mySome that returns true if it satisfies a condition in array once
+    for(let i = 0; i<this.length;i++){ //loop through array
+        if(this[i]===undefined)continue; //if undefined, skip and continue to next value
+        if(callbackFn(this[i])===true){ //if array satisfies condtion return true otherwise false
+            return true;// return true
+        }
+    }
+    return false // return false
 };
 
-// EVERY //
-Array.prototype.myEvery = function() {
-
+//EVERY//
+Array.prototype.myEvery = function(callbackFn){ //function for myEvery
+    for(let i = 0; i<this.length;i++){//loop through array
+      if(this[i]===undefined)continue;//if there is an undefined space in array, skip and continue to next value
+      if(!callbackFn(this[i])){ //if the array contains a value that does not match condition
+        return false; //return false
+      }
+    }
+    return true;//return true
 };
 
 // REDUCE //
-Array.prototype.myReduce = function() {
-
+Array.prototype.myReduce = function(callbackFn, initial){
+    let sum = initial || 0; //start the sum at 0
+    for(let i = 0; i<this.length; i++){ //loop through array
+        if(this[i]===undefined)continue; //array contains undefined value, continue to next
+        sum = callbackFn(sum,this[i])// add elements in array
+    }
+    return sum; //return the sum
 };
 
 // INCLUDES //
