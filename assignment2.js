@@ -49,7 +49,7 @@ Array.prototype.myIndexOf = function(includedElement, index) {
 };
 
 // PUSH //
-Array.prototype.myPush = function(...args){
+Array.prototype.myPush = function(...args) {
     let arg_i = 0;
     let length = this.length; // uses length property to determine where to start inserting the given values
     for(let i = length; i < length + args.length; i++){ // created for loop to loop through array
@@ -60,8 +60,13 @@ Array.prototype.myPush = function(...args){
 };
 
 // LASTINDEXOF //
-Array.prototype.myLastIndexOf = function() {
-
+Array.prototype.myLastIndexOf = function(includedElement, index) {
+    for(let i = this.length - 1; i >= (index || 0); i--){ // created for loop to loop through array
+        if(this[i] === includedElement){ //find element in array
+            return i; //eturns the last index at which a given element can be found in the array
+        }
+    }
+    return -1; // return -1 if it is not present
 };
 
 // KEYS //
